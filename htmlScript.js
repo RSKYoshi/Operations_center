@@ -20,11 +20,11 @@ flexboxFroggy.setAttribute("height","643");
 
 
 
-let div1 = document.getElementById("div1");
-div1.addEventListener("click", sayHello);
+// let div1 = document.getElementById("div1");
+// div1.addEventListener("click", sayHello);
 
-let dateBtn = document.getElementById("dateButton");
-dateBtn.addEventListener("click", function (){
-    alert(currentDate())
-})
-
+let date = document.getElementById("date");
+// datebox.addEventListener("click", function (){
+//     alert(currentDate())
+// })
+date.innerHTML = currentDate();

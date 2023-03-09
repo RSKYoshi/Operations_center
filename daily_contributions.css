@@ -1,0 +1,24 @@
+
+#dateBoxBaseContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+#dateBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    height: 5vh;
+    border: 7px silver solid;
+    background-image: url("https://media1.giphy.com/media/lFNmSjRDN9SiLJ3a9Z/200w.gif");
+    object-fit: fill;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+}
+
+#date {
+    color: whitesmoke;
+}
