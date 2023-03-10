@@ -1,4 +1,4 @@
-import {currentDate, sayHello} from "./functions.js";
+import {currentDate, sayHello, clock} from "./functions.js";
 
 
 let youtubeVideo = document.getElementById("video");
@@ -23,8 +23,9 @@ flexboxFroggy.setAttribute("height","643");
 // let div1 = document.getElementById("div1");
 // div1.addEventListener("click", sayHello);
 
-let date = document.getElementById("date");
+// let date = document.getElementById("clock");
 // datebox.addEventListener("click", function (){
 //     alert(currentDate())
 // })
-date.innerHTML = currentDate();
+// date.innerText = clock();
+
