@@ -44,15 +44,19 @@ clock();
 //     alert(currentDate)
 // }
 
-async function currentLocation(){
-    navigator.geolocation.getCurrentPosition(showPosition)
+function currentLocation(){
+    navigator.geolocation.getCurrentPosition(showPosition);
 }
+currentLocation()
 
-async function showPosition(position){
+function showPosition(position){
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
 
     console.log("lat: " + lat + "\n" + "long: " + long);
-    return "lat: " + lat + "\n" + "long: " + long
+
+    let gps = document.getElementById("location");
+    gps.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
 }
+
 
