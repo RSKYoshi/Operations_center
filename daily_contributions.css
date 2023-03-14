@@ -13,6 +13,7 @@
     width: 25vw;
     height: 5vh;
     border: 3px silver solid;
+    border-radius: 2rem;
     background-image: url("https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif");
     object-fit: fill;
     /*background-repeat: no-repeat;*/

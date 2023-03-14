@@ -1,4 +1,4 @@
-export {sayHello, currentDate, clock}
+export {sayHello, currentDate, clock, currentLocation}
 
 function sum(num1,num2){
     return num1 + num2
@@ -12,13 +12,6 @@ function sayHello(){
 function currentDate(){
     return new Date()
 }
-
-function getYear(){}
-function getMonth(){}
-function getDay(){}
-function getHours(){}
-function getMinutes(){}
-function getSeconds(){}
 
 function clock(){
     let date = new Date();
@@ -50,3 +43,16 @@ clock();
 // function alertFunction(currentDate){
 //     alert(currentDate)
 // }
+
+async function currentLocation(){
+    navigator.geolocation.getCurrentPosition(showPosition)
+}
+
+async function showPosition(position){
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+
+    console.log("lat: " + lat + "\n" + "long: " + long);
+    return "lat: " + lat + "\n" + "long: " + long
+}
+

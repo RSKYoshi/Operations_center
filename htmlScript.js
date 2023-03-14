@@ -1,4 +1,4 @@
-import {currentDate, sayHello, clock} from "./functions.js";
+import {currentDate, sayHello, clock, currentLocation} from "./functions.js";
 
 
 let youtubeVideo = document.getElementById("video");
@@ -15,7 +15,9 @@ flexboxFroggy.setAttribute("width","900");
 flexboxFroggy.setAttribute("height","643");
 
 
-
+// let locationDiv = document.getElementById("location");
+// let locationData = document.createTextNode("test")
+// locationDiv.appendChild(locationData)
 
 
 
