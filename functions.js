@@ -1,4 +1,16 @@
-export {sayHello, currentDate, clock, currentLocation}
+export {sayHello, currentDate, clock}
+let lat;
+let long;
+
+function showPosition(position){
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+
+    console.log("lat: " + lat + "\n" + "long: " + long);
+
+    let showCoords = document.getElementById("location");
+    showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
+}
 
 function sum(num1,num2){
     return num1 + num2
@@ -44,19 +56,32 @@ clock();
 //     alert(currentDate)
 // }
 
-function currentLocation(){
-    navigator.geolocation.getCurrentPosition(showPosition);
-}
-currentLocation()
 
-function showPosition(position){
+//this manipulates what to do with gps data
+function coordsAPI(position){
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
+    console.log(lat);
+    console.log(long);
 
-    console.log("lat: " + lat + "\n" + "long: " + long);
+    //make the api call in here???
+    
 
-    let gps = document.getElementById("location");
-    gps.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
 }
+
+
+
+
+//this says to get the current gps coordinates from the user's browser using users's position
+function showCoordsAPI(){
+    navigator.geolocation.getCurrentPosition(coordsAPI);
+}
+showCoordsAPI();
+
+
+// function openWeatherAPICall() {
+// }
+
+
 
 

@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>Daily Contributions</title>
     <link rel="stylesheet" href="daily_contributions.css">
+    <script type="module" src="htmlScript.js"></script>
+    <script type="module" src="functions.js"></script>
+    <script type="module" src="openWeatherAPICall.js"></script>
+    <script>
+
+        function currentLocation(){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+
+        function showPosition(position){
+            let lat = position.coords.latitude;
+            let long = position.coords.longitude;
+
+            console.log("lat: " + lat + "\n" + "long: " + long);
+
+            let showCoords = document.getElementById("location");
+            showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
+        }
+
+    </script>
 </head>
 <body>
 
@@ -11,6 +31,11 @@
     <div id="clockBoxBaseContainer">
         <div id="clockBox">
             <div id="clock" onload="clock()"></div>
+        </div>
+    </div>
+    <div id="weatherBaseContainer">
+        <div id="weatherBox">
+            <div id="weather">weather here</div>
         </div>
     </div>
 
@@ -22,12 +47,11 @@
     <br>
 <!--    <iframe id="flexFrog" ></iframe>-->
 
-    <div id="location" onclick="
-import {displayCoords} from './functions';
-displayCoords()"></div>
+    <button id="locationButton" onclick="currentLocation()">show gps</button>
+    <div id="location"></div>
 
 
-    <script type="module" src="htmlScript.js"></script>
+
 
 
 </body>

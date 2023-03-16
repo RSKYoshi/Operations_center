@@ -1,4 +1,4 @@
-import {currentDate, sayHello, clock, currentLocation} from "./functions.js";
+// import {currentDate, sayHello, clock, currentLocation} from "./functions.js";
 
 
 let youtubeVideo = document.getElementById("video");
@@ -9,10 +9,10 @@ youtubeVideo.setAttribute("height","315");
 youtubeVideo.setAttribute("frameBorder","0");
 youtubeVideo.setAttribute("allow","accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
 
-let flexboxFroggy = document.getElementById("flexFrog");
-flexboxFroggy.setAttribute("src", "https://flexboxfroggy.com/")
-flexboxFroggy.setAttribute("width","900");
-flexboxFroggy.setAttribute("height","643");
+// let flexboxFroggy = document.getElementById("flexFrog");
+// flexboxFroggy.setAttribute("src", "https://flexboxfroggy.com/")
+// flexboxFroggy.setAttribute("width","900");
+// flexboxFroggy.setAttribute("height","643");
 
 
 
