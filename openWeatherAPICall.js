@@ -1,3 +1,4 @@
+
 import {browserCoords, browserlat, browserLong} from "./functions.js"
 //objective: on page load, show a functioning weather forecast
 
@@ -16,7 +17,7 @@ const app = {
 
             let lat = position.coords.latitude.toFixed(2);
             let long = position.coords.longitude.toFixed(2);
-            let key = '585c78787d7c11f15ac5fdcfde8c9bc9'
+            let key = OPENWEATHER_API_KEY
             let units = "metric"
             let lang = "en"
 
@@ -32,11 +33,14 @@ const app = {
                     let weatherDiv = document.getElementById("weather");
                     for (let i = 0; i < 7; i++) {
                         for (let j = 0; j < 1; j++) {
+                            const week = [ ]
 
 
                             weatherDiv.innerHTML += `
                             
-                            <div>
+                            <div id="apiBaseCard">
+                                <div>${new Date(apiData.daily[i].dt * 1000).toDateString()}</div>
+                                <hr>
                                 <div>${apiData.daily[i].weather[j].description}</div>
                             </div>
                         

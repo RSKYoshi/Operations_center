@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Daily Contributions</title>
+    <script type="module" src="openWeatherAPICall.js"></script>
     <link rel="stylesheet" href="daily_contributions.css">
+    <link rel="stylesheet" href="openWeatherAPICall.css">
     <script type="module" src="htmlScript.js"></script>
     <script type="module" src="functions.js"></script>
-    <script type="module" src="openWeatherAPICall.js"></script>
+    <script type="text/javascript" src="apiKeys.js"></script>
     <script>
 
         function currentLocation(){
@@ -27,28 +29,36 @@
 </head>
 <body>
 
-
-    <div id="clockBoxBaseContainer">
-        <div id="clockBox">
-            <div id="clock" onload="clock()"></div>
+    <div id="bossDiv">
+        <div id="clockBoxBaseContainer">
+            <div id="clockBox">
+                <div id="clock" onload="clock()"></div>
+            </div>
         </div>
-    </div>
-    <div id="weatherBaseContainer">
-        <div id="weatherBox">
-            <div id="weather"></div>
+        <div id="city">
+            city
         </div>
+        <!--    this div centers the layout on the page-->
+        <div id="weatherBaseContainer">
+            <!--        this div is the border around the cards-->
+            <div id="weatherBox">
+                <!--            where the cards are appended into-->
+                <div id="weather"></div>
+            </div>
+        </div>
+
+
+        <!--    <div id="div1" >Hello</div>-->
+        <br>
+        <iframe id="video" allowfullscreen></iframe>
+        <br><br>
+        <br>
+        <!--    <iframe id="flexFrog" ></iframe>-->
+
+        <button id="locationButton" onclick="currentLocation()">show gps</button>
+        <div id="location"></div>
     </div>
 
-
-<!--    <div id="div1" >Hello</div>-->
-    <br>
-    <iframe id="video" allowfullscreen></iframe>
-    <br><br>
-    <br>
-<!--    <iframe id="flexFrog" ></iframe>-->
-
-    <button id="locationButton" onclick="currentLocation()">show gps</button>
-    <div id="location"></div>
 
 
 

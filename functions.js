@@ -88,7 +88,9 @@ function browserLong(position){
     return long
 }
 
-
+function getCity(){
+    navigator.geolocation.getCurrentPosition()
+}
 
 
 
