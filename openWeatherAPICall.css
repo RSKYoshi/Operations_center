@@ -46,8 +46,11 @@
     font-size: 1rem;
     border-radius: 4px;
     margin: 1rem;
-    width: 10vw;
-    height: 10vh;
+    /*width: 15rem;*/
+    /*height: 15rem;*/
+}
 
+.hr {
+    width: 5rem
 }
 

@@ -1,5 +1,6 @@
 
 import {browserCoords, browserlat, browserLong} from "./functions.js"
+let today = new Date();
 //objective: on page load, show a functioning weather forecast
 
 //this const app has several functions that may be activated via dot notation [ex: app.init()]
@@ -18,7 +19,7 @@ const app = {
             let lat = position.coords.latitude.toFixed(2);
             let long = position.coords.longitude.toFixed(2);
             let key = OPENWEATHER_API_KEY
-            let units = "metric"
+            let units = "imperial"
             let lang = "en"
 
             let url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&appid=${key}&units=${units}&lang=${lang}`
@@ -33,15 +34,25 @@ const app = {
                     let weatherDiv = document.getElementById("weather");
                     for (let i = 0; i < 7; i++) {
                         for (let j = 0; j < 1; j++) {
-                            const week = [ ]
+                            // console.log(today);
+                            let currentDay = new Date(apiData.daily[i].dt * 1000).toDateString();
+                            // currentDay === today ? "today":currentDay
+                            // console.log(currentDay.split(' '));
+                            let dateArray = currentDay.split(' ');
+                            console.log(dateArray);
 
 
                             weatherDiv.innerHTML += `
                             
                             <div id="apiBaseCard">
-                                <div>${new Date(apiData.daily[i].dt * 1000).toDateString()}</div>
-                                <hr>
+                                <img src="https://openweathermap.org/img/wn/${apiData.daily[i].weather[j].icon}@2x.png" 
+                                alt="img"/>
+                                <div>${currentDay}</div>
+                                <hr class="hr">
                                 <div>${apiData.daily[i].weather[j].description}</div>
+                                <hr class="hr">
+                                <div>HI: ${apiData.daily[i].temp.max}°F</div>
+                                <div>Low: ${apiData.daily[i].temp.min}°F</div>
                             </div>
                         
                         `
