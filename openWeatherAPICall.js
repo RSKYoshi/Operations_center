@@ -32,6 +32,7 @@ const app = {
                     app.showWeather(apiData);
                     console.log(apiData);
                     let weatherDiv = document.getElementById("weather");
+                    //at index 0, I want the day to say "today" instead of the actual day name
                     for (let i = 0; i < 7; i++) {
                         for (let j = 0; j < 1; j++) {
                             // console.log(today);
@@ -40,6 +41,15 @@ const app = {
                             // console.log(currentDay.split(' '));
                             let dateArray = currentDay.split(' ');
                             console.log(dateArray);
+                            let replacementDay = dateArray[0];
+                            // let weekArraySearch = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                            // let todayString = "Today"
+                            // for (let k = 0; k < replacementDay.length; k++) {
+                            //     replacementDay[0].replace("Sun", todayString)
+                            // }
+                            // for (let k = 0; k < dateArray.length; k++) {
+                            //     replacementDay = dateArray[i].replace("", "Today")
+                            // }
 
 
                             weatherDiv.innerHTML += `
@@ -47,7 +57,7 @@ const app = {
                             <div id="apiBaseCard">
                                 <img src="https://openweathermap.org/img/wn/${apiData.daily[i].weather[j].icon}@2x.png" 
                                 alt="img"/>
-                                <div>${currentDay}</div>
+                                <div>${replacementDay}</div>
                                 <hr class="hr">
                                 <div>${apiData.daily[i].weather[j].description}</div>
                                 <hr class="hr">
