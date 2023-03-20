@@ -4,81 +4,84 @@
 /*default is mobile, made for 320px-480px*/
 
 
-/*#bossDiv {*/
+#bossDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw
+}
+
+#weatherBaseContainer {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+/*#weatherBox {*/
 /*    display: flex;*/
-/*    flex-direction: column;*/
+/*    !*flex-direction: row;*!*/
+/*    justify-content: space-around;*/
 /*    align-items: center;*/
-/*    height: 100vh;*/
-/*    width: 100vw*/
+/*    width: 500rem;*/
+/*    height: 5vh;*/
+/*    border: 3px solid green;*/
+/*    border-radius: 2rem;*/
+/*    !*background-image: url("https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif");*!*/
+/*    object-fit: fill;*/
+/*    !*background-repeat: no-repeat;*!*/
+/*    background-size: cover;*/
 /*}*/
 
-/*#weatherBaseContainer {*/
-/*    !*display: flex;*!*/
-/*    justify-content: center;*/
-/*    margin: 1rem;*/
-/*}*/
+#weather {
+    display: flex;
+    justify-content: space-evenly;
+    border: 3px solid silver;
+    flex-direction: row;
+}
 
-/*!*#weatherBox {*!*/
-/*!*    display: flex;*!*/
-/*!*    !*flex-direction: row;*!*!*/
-/*!*    justify-content: space-around;*!*/
-/*!*    align-items: center;*!*/
-/*!*    width: 500rem;*!*/
-/*!*    height: 5vh;*!*/
-/*!*    border: 3px solid green;*!*/
-/*!*    border-radius: 2rem;*!*/
-/*!*    !*background-image: url("https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif");*!*!*/
-/*!*    object-fit: fill;*!*/
-/*!*    !*background-repeat: no-repeat;*!*!*/
-/*!*    background-size: cover;*!*/
-/*!*}*!*/
+#apiBaseCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+    /*border: 2px whitesmoke solid;*/
+    box-shadow: 0px 0px 10px 2px darkslategrey;
+    background-color: rgba(255, 255, 255, 80%);
+    font-size: 1rem;
+    border-radius: 4px;
+    margin: 1rem;
+    /*width: 15rem;*/
+    /*height: 15rem;*/
+}
 
-/*#weather {*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*    border: 3px solid silver;*/
-/*    flex-direction: column;*/
-/*}*/
-
-/*#apiBaseCard {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    color: grey;*/
-/*    !*border: 2px whitesmoke solid;*!*/
-/*    box-shadow: 0px 0px 10px 2px darkslategrey;*/
-/*    background-color: rgba(255, 255, 255, 80%);*/
-/*    font-size: 1rem;*/
-/*    border-radius: 4px;*/
-/*    margin: 1rem;*/
-/*    !*width: 15rem;*!*/
-/*    !*height: 15rem;*!*/
-/*}*/
-
-/*.hr {*/
-/*    width: 5rem*/
-/*}*/
+.hr {
+    width: 5rem
+}
 
 
 
 
 /*small screens, laptops*/
-@media only screen and (max-width: 1680px) and (min-width:769px) {
+/*the max width the screen cango before  applying below changes*/
+@media only screen and (min-width:500px) and  (max-width: 1000px) {
 
-    #bossDiv {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        width: 100vw
-    }
 
-    #weatherBaseContainer {
+
+    /*#bossDiv {*/
         /*display: flex;*/
-        justify-content: center;
-        margin: 1rem;
+        /*flex-direction: column;*/
+        /*align-items: center;*/
+        /*height: 100vh;*/
+        /*width: 100vw*/
+    /*}*/
 
-    }
+    /*#weatherBaseContainer {*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*margin: 1rem;*/
+    /**/
+    /*}*/
 
     /*#weatherBox {*/
     /*    display: flex;*/
@@ -96,32 +99,30 @@
     /*}*/
 
     #weather {
-        display: flex;
-        justify-content: space-evenly;
-        border: 3px solid silver;
-        flex-direction: row;
-
-
+        /*display: flex;*/
+        /*justify-content: space-evenly;*/
+        /*border: 3px solid silver;*/
+        flex-direction: column;
     }
 
-    #apiBaseCard {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: grey;
+    /*#apiBaseCard {*/
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*align-items: center;*/
+        /*color: grey;*/
         /*border: 2px whitesmoke solid;*/
-        box-shadow: 0px 0px 10px 2px darkslategrey;
-        background-color: rgba(255, 255, 255, 80%);
-        font-size: 1rem;
-        border-radius: 4px;
-        margin: 1rem;
+        /*box-shadow: 0px 0px 10px 2px darkslategrey;*/
+        /*background-color: rgba(255, 255, 255, 80%);*/
+        /*font-size: 1rem;*/
+        /*border-radius: 4px;*/
+        /*margin: 1rem;*/
         /*width: 15rem;*/
         /*height: 15rem;*/
-    }
+    /*}*/
 
-    .hr {
-        width: 5rem
-    }
+    /*.hr {*/
+    /*    width: 5rem*/
+    /*}*/
 
 
 }
