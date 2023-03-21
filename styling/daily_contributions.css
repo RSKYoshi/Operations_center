@@ -1,9 +1,36 @@
 
-body {
+html {
+    overflow: hidden;
     padding:0;
     margin:0;
 }
 
+body {
+    padding:0;
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#bossDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 101.1vh;
+    width: 101vw;
+    /* background-image: url(./img/ocean-swirl-bg.jpeg); */
+    /* background-image: url(https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif); */
+    background-image: url(img/paid-istock-beach.jpg);
+    background-size: 100vw 100vh;
+    overflow: scroll;
+    /* z-index: 4; */
+    padding: 0;
+    /* margin: 15px; */
+    margin-left: 0rem;
+    margin-right: -11rem;
+    margin-bottom: 14rem;
+}
 
 #clockBoxBaseContainer {
     display: flex;
@@ -48,8 +75,14 @@ body {
 }
 
 #video {
-    width: 31.9vw;
-    height: 37vh;
+    /*width: 31.9vw;*/
+    /*height: 37vh;*/
+    color: grey;
+    /*border: 2px whitesmoke solid;*/
+    box-shadow: 0px 0px 10px 2px darkslategrey;
+    background-color: rgba(255, 255, 255, 80%);
+    font-size: 2rem;
+    border-radius: 7px;
     z-index: 2;
 }
 
