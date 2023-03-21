@@ -1,5 +1,4 @@
-export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords}
-
+export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords, getCityFromAPI}
 
 function showPosition(position){
     let lat = position.coords.latitude;
@@ -44,6 +43,7 @@ function clock(){
 }
 clock();
 
+
 // function setClockTimeout(){
 //     setInterval(function(){ clock() }, 1000);
 // }
@@ -67,7 +67,6 @@ clock();
 function showCoordsAPI(){
     return navigator.geolocation.getCurrentPosition(browserCoords);
 }
-showCoordsAPI();
 
 function browserCoords(position){
     let lat = position.coords.latitude;
@@ -106,5 +105,55 @@ function clickEffect(e){
     d.addEventListener('animationend',function(){d.parentElement.removeChild(d);}.bind(this));
 }
 document.addEventListener('mousemove', clickEffect);
+
+
+function getCityFromAPI(position){
+    navigator.geolocation.getCurrentPosition(position => {
+        let lat = position.coords.latitude.toFixed(2);
+        let long = position.coords.longitude.toFixed(2);
+        let limit = 2;
+        let url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&limit=${limit}&appid=${OPENWEATHER_API_KEY}`
+
+        fetch(url)
+            .then((resp) =>
+                resp.json()
+            )
+            .then((apiData) => {
+                    console.log(apiData)
+                    let cityDiv = document.getElementById("cityDiv");
+                    return cityDiv.innerHTML += "Weather for " + apiData[0].name
+                }
+                // console.log(apiData)
+            )
+    })
+}
+window.onload=getCityFromAPI;
+
+
+
+
+
+
+function currentLocation(position) {
+    navigator.geolocation.getCurrentPosition(position => {
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        let showCoords = document.getElementById("location");
+        showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
+        console.log("lat: " + lat + "\n" + "long: " + long);
+    })
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 

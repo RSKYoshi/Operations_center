@@ -1,6 +1,7 @@
 // import {currentDate, sayHello, clock, currentLocation} from "./functions.js";
 
 
+
 let youtubeVideo = document.getElementById("video");
 youtubeVideo.setAttribute("src","https://www.youtube.com/embed/HdiKqg23D0o?controls=0" );
 youtubeVideo.setAttribute("title","YouTube video player");
@@ -29,3 +30,5 @@ youtubeVideo.setAttribute("allow","accelerometer; autoplay; clipboard-write; enc
 // })
 // date.innerText = clock();
 
+// let secondClock = document.getElementById("anotherClock");
+// secondClock.innerHTML = clock;

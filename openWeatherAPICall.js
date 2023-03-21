@@ -53,17 +53,19 @@ const app = {
 
 
                             weatherDiv.innerHTML += `
-                            
-                            <div id="apiBaseCard">
-                                <img src="https://openweathermap.org/img/wn/${apiData.daily[i].weather[j].icon}@2x.png" 
-                                alt="img"/>
-                                <div>${replacementDay}</div>
-                                <hr class="hr">
-                                <div>${apiData.daily[i].weather[j].description}</div>
-                                <hr class="hr">
-                                <div>HI: ${apiData.daily[i].temp.max}°F</div>
-                                <div>Low: ${apiData.daily[i].temp.min}°F</div>
+                            <div id="apiBaseCardBorder">
+                                 <div id="apiBaseCard">
+                                    <img src="https://openweathermap.org/img/wn/${apiData.daily[i].weather[j].icon}@2x.png" 
+                                    alt="img"/>
+                                    <div>${replacementDay}</div>
+                                    <hr class="hr">
+                                    <div>${apiData.daily[i].weather[j].description}</div>
+                                    <hr class="hr">
+                                    <div>HI: ${apiData.daily[i].temp.max}°F</div>
+                                    <div>Low: ${apiData.daily[i].temp.min}°F</div>
+                                </div>
                             </div>
+                           
                         
                         `
                         }

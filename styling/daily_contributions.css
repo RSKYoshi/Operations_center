@@ -1,4 +1,10 @@
 
+body {
+    padding:0;
+    margin:0;
+}
+
+
 #clockBoxBaseContainer {
     display: flex;
     justify-content: center;
@@ -27,11 +33,24 @@
     background-color: rgba(255, 255, 255, 80%);
     font-size: 2rem;
     border-radius: 4px;
+    z-index: 2
+}
+
+#cityDiv {
+    color: grey;
+    /*border: 2px whitesmoke solid;*/
+    box-shadow: 0px 0px 10px 2px darkslategrey;
+    background-color: rgba(255, 255, 255, 80%);
+    font-size: 1.5rem;
+    border-radius: 4px;
+    z-index: 2
+
 }
 
 #video {
     width: 31.9vw;
-    height: 37vh
+    height: 37vh;
+    z-index: 2;
 }
 
 div.clickEffect  {
@@ -42,7 +61,7 @@ div.clickEffect  {
     border-color: lightblue transparent;
     border-radius:50%;
     animation:clickEffect 0.4s ease-out;
-    z-index:99999;
+    z-index: 1;
 }
 @keyframes clickEffect {
     0% {

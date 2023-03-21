@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,35 +11,16 @@
     <script type="module" src="htmlScript.js"></script>
     <script type="module" src="functions.js"></script>
     <script type="text/javascript" src="apiKeys.js"></script>
-    <script>
-
-        function currentLocation(){
-            navigator.geolocation.getCurrentPosition(showPosition);
-        }
-
-        function showPosition(position){
-            let lat = position.coords.latitude;
-            let long = position.coords.longitude;
-
-            console.log("lat: " + lat + "\n" + "long: " + long);
-
-            let showCoords = document.getElementById("location");
-            showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
-        }
-
-    </script>
 </head>
 <body>
 
     <div id="bossDiv">
         <div id="clockBoxBaseContainer">
             <div id="clockBox">
-                <div id="clock" onload="clock()"></div>
+                <div id="clock"></div>
             </div>
         </div>
-        <div id="city">
-            city
-        </div>
+        <div id="cityDiv"></div>
         <!--    this div centers the layout on the page-->
 <!--        <div id="weatherDivSizeAdjuster">-->
             <div id="weatherBaseContainer">
@@ -58,10 +41,10 @@
         <br>
         <!--    <iframe id="flexFrog" ></iframe>-->
 
-        <button id="locationButton" onclick="currentLocation()">show gps</button>
-        <div id="location"></div>
+<!--        <button id="locationButton" onclick="currentLocation()">show gps</button>-->
+<!--        <div id="location"></div>-->
+<!--        <div id="anotherClock"></div>-->
     </div>
-
 
 
 
