@@ -2,6 +2,8 @@
 
 
 
+import {clickEffect} from "./functions";
+
 let youtubeVideo = document.getElementById("video");
 youtubeVideo.setAttribute("src","https://www.youtube.com/embed/HdiKqg23D0o?controls=0" );
 youtubeVideo.setAttribute("title","YouTube video player");
@@ -32,3 +34,8 @@ youtubeVideo.setAttribute("allow","accelerometer; autoplay; clipboard-write; enc
 
 // let secondClock = document.getElementById("anotherClock");
 // secondClock.innerHTML = clock;
+
+
+// let videoDiv = document.getElementById("video");
+// videoDiv.addEventListener("dragstart", dragVideoStart)
+// videoDiv.addEventListener("dragend", dragVideoEnd)

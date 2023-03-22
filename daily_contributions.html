@@ -2,53 +2,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Daily Contributions</title>
-    <script type="module" src="openWeatherAPICall.js"></script>
-    <link rel="stylesheet" href="styling/daily_contributions.css">
-    <link rel="stylesheet" href="styling/openWeatherAPICall.css">
-    <script type="module" src="htmlScript.js"></script>
-    <script type="module" src="functions.js"></script>
-    <script type="text/javascript" src="apiKeys.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Daily Contributions</title>
+        <script type="module" src="openWeatherAPICall.js"></script>
+        <link rel="stylesheet" href="styling/daily_contributions.css">
+        <link rel="stylesheet" href="styling/openWeatherAPICall.css">
+        <script type="module" src="htmlScript.js"></script>
+        <script type="module" src="functions.js"></script>
+        <script type="text/javascript" src="apiKeys.js"></script>
+    </head>
+    <body>
 
-    <div id="bossDiv">
-        <div id="clockBoxBaseContainer">
-            <div id="clockBox">
-                <div id="clock"></div>
+        <div id="bossDiv">
+            <div id="clockBoxBaseContainer">
+                <div id="clockBox">
+                    <div id="clock"></div>
+                </div>
             </div>
+            <div id="cityDiv"></div>
+            <!--    this div centers the layout on the page-->
+    <!--        <div id="weatherDivSizeAdjuster">-->
+                <div id="weatherBaseContainer">
+                    <!--        this div is the border around the cards-->
+                    <!--            <div id="weatherBox">-->
+                    <!--            where the cards are appended into-->
+                    <div id="weather"></div>
+                    <!--            </div>-->
+                </div>
+
+    <!--        </div>-->
+
+
+            <!--    <div id="div1" >Hello</div>-->
+            <br>
+            <div id="iframeBorderDiv" draggable="true">
+                <div style="cursor: move;  user-select: none;">click here to drag</div>
+                <iframe id="video" style="user-select: none;" src="https://www.youtube.com/embed/HdiKqg23D0o?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+<!--            <div id="testDragDiv" style="border: 7px solid  red; height: 7vh; width: 7vw;  position: absolute; margin-top: 40vh" draggable="true"></div>-->
+            <br><br>
+            <br>
+            <!--    <iframe id="flexFrog" ></iframe>-->
+
+    <!--        <button id="locationButton" onclick="currentLocation()">show gps</button>-->
+            <div id="location"></div>
+    <!--        <div id="anotherClock"></div>-->
         </div>
-        <div id="cityDiv"></div>
-        <!--    this div centers the layout on the page-->
-<!--        <div id="weatherDivSizeAdjuster">-->
-            <div id="weatherBaseContainer">
-                <!--        this div is the border around the cards-->
-                <!--            <div id="weatherBox">-->
-                <!--            where the cards are appended into-->
-                <div id="weather"></div>
-                <!--            </div>-->
-            </div>
-
-<!--        </div>-->
-
-
-        <!--    <div id="div1" >Hello</div>-->
-        <br>
-        <iframe id="video" allowfullscreen></iframe>
-        <br><br>
-        <br>
-        <!--    <iframe id="flexFrog" ></iframe>-->
-
-<!--        <button id="locationButton" onclick="currentLocation()">show gps</button>-->
-<!--        <div id="location"></div>-->
-<!--        <div id="anotherClock"></div>-->
-    </div>
 
 
 
 
 
-</body>
+    </body>
 </html>

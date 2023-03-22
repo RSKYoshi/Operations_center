@@ -121,6 +121,7 @@ const app = {
     // },
     showWeather: (resp) => {
         console.log(resp);
+    //    starbucks lat: 29.4416905 long: -98.6661463
     }
 
 

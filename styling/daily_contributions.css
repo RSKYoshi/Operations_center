@@ -22,7 +22,9 @@ body {
     /* background-image: url(./img/ocean-swirl-bg.jpeg); */
     /* background-image: url(https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif); */
     background-image: url(img/paid-istock-beach.jpg);
-    background-size: 100vw 100vh;
+    background-size: 101vw 101vh;
+    /*background-size: 100vw 100vh;*/
+
     overflow: scroll;
     /* z-index: 4; */
     padding: 0;
@@ -74,6 +76,17 @@ body {
 
 }
 
+#iframeBorderDiv {
+    z-index: 3;
+    cursor: move;
+    /*position: absolute;*/
+    /*margin-top: 40vh;*/
+    /*top: 50%;*/
+    /*left:  50%*/
+    /*width: 20rem;*/
+    /*transform: translate(-50% ,-50%);*/
+}
+
 #video {
     /*width: 31.9vw;*/
     /*height: 37vh;*/
@@ -84,6 +97,8 @@ body {
     font-size: 2rem;
     border-radius: 7px;
     z-index: 2;
+    cursor: move;
+    /*position: absolute;*/
 }
 
 div.clickEffect  {
@@ -111,4 +126,13 @@ div.clickEffect  {
         margin: -1em;
         border-width: 0.03em;
     }
+}
+
+/*small screens, laptops*/
+/*the max width the screen cango before  applying below changes*/
+@media only screen and (min-width:500px) and  (max-width: 1000px) {
+    #bossDiv {
+        background-size: 100vw 100vh;
+    }
+
 }

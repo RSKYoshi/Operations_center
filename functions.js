@@ -1,4 +1,4 @@
-export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords, getCityFromAPI}
+export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords, getCityFromAPI, clickEffect}
 
 function showPosition(position){
     let lat = position.coords.latitude;
@@ -100,12 +100,12 @@ function getCity(){
 function clickEffect(e){
     let d=document.createElement("div");
     d.className="clickEffect";
-    d.style.top=e.clientY+"px";d.style.left=e.clientX+"px";
+    d.style.top=e.clientY+"px";
+    d.style.left=e.clientX+"px";
     document.body.appendChild(d);
     d.addEventListener('animationend',function(){d.parentElement.removeChild(d);}.bind(this));
 }
 document.addEventListener('mousemove', clickEffect);
-
 
 function getCityFromAPI(position){
     navigator.geolocation.getCurrentPosition(position => {
@@ -142,11 +142,26 @@ function currentLocation(position) {
         showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
         console.log("lat: " + lat + "\n" + "long: " + long);
     })
-
-
 }
+currentLocation();
+
+// function clickNDrag(){
+
+    let  iframeDiv =  document.getElementById("iframeBorderDiv");
+    iframeDiv.style.top= '50%';
+    function onDrag(e){
+        iframeDiv.style.left = `${e.clientX}px`
+        iframeDiv.style.top = `${e.clientY}px`
+        console.log( e.clientX + "," + e.clientY );
+        // console.log('click');
+    }
+    iframeDiv.addEventListener("drag", onDrag);
+// }
 
 
+
+// clickNDrag();
+// window.onload = clickNDrag;
 
 
 
