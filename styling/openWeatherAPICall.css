@@ -8,9 +8,17 @@
 
 #weatherBaseContainer {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
+    /*justify-content: center;*/
+    margin: 11rem;
     z-index: 2;
+    width: 100vw;
+
+    /*below is for scrolling wrapper*/
+    flex-direction: row;
+    /*overflow-x: scroll;*/
+    /*overflow-y: hidden;*/
+    /*white-space: normal;*/
+
 }
 
 /*#weatherBox {*/
@@ -30,42 +38,56 @@
 
 #weather {
     display: flex;
-    justify-content: space-evenly;
-    /*border: 3px solid silver;*/
-    flex-direction: row;
-    margin-left: 0vw;
+    /* justify-content: space-evenly; */
+    /* border: 3px solid silver; */
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-top: -17vh;
+    overflow: scroll;
+    white-space: normal;
+    /*overflow-y: scroll;*/
+    height: 100vh;
+
 }
 
-#apiBaseCardBorder {
+.apiBaseCardBorder {
     background-image: url("img/koa-bg.webp");
     margin: 1rem;
     border-radius: 10px;
 }
 
-#apiBaseCard {
+.apiBaseCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: grey;
-    /*border: 2px whitesmoke solid;*/
-    /*box-shadow: 0px 0px 10px 2px darkslategrey;*/
+    /* color: rgba(33, 32, 32, 0.45); */
+    /* color: rgba(33, 32, 32, 0.45); */
+    /* color: rgb(0 0 0 / 58%); */
+    color: darkgreen;
+    /* text-shadow: 0px 0px 0px black; */
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 0 5px #aaa inset;
     border-radius: 10px;
-    position:relative;    background-color: rgba(255, 255, 255, 80%);
+    position: relative;
+    /* background-color: rgba(255, 255, 255, 80%); */
+    /* background-color: rgba(255, 255, 255, 57%); */
+    background-color: rgba(255, 255, 255, 46%);
+    /* background-color: rgba(255, 255, 255, 44%); */
+    /* background-image: url(img/lavastone-bg.jpeg); */
+    /* opacity: 40%; */
     font-size: 1rem;
-    /*border-radius: 12px;*/
+    /* border-radius: 12px; */
     margin: 1rem;
-    /*border: 11px solid white;*/
-    /*width: 15rem;*/
-    /*height: 15rem;*/
-    /*background-image: url("./img/surfboard-sand-bg.webp");*/
-
-
-
-
-
-
-    z-index: 2
+    /* border: 11px solid white; */
+    width: 15rem;
+    height: 15rem;
+    /* background-image: url(./img/surfboard-sand-bg.webp); */
+    z-index: 2;
+    /* float: left; */
+    text-align: center;
+    /* text-shadow: -1px -1px rgba(0,0,0,0.5), 1px 1px rgba(255,255,255,0.5); */
+    text-shadow: 0px 0px rgba(0,0,0,0.5), 0px -2px rgba(255,255,255,0.5);
+    color: rgb(0 0 0 / 63%);
+    padding: 10px;
 }
 /*#apiBaseCard:hover {*/
 /*    transform: translate(0, -2px);*/
@@ -82,7 +104,7 @@
 
 /*small screens, laptops*/
 /*the max width the screen cango before  applying below changes*/
-@media only screen and (min-width:500px) and  (max-width: 1000px) {
+@media only screen and (min-width:1300px)  {
 
 
 
@@ -96,9 +118,13 @@
 
     #weatherBaseContainer {
         /*display: flex;*/
-        /*justify-content: center;*/
-        /*margin: 1rem;*/
-        width: 52%;
+        justify-content: space-evenly;
+        /*margin: 11rem;*/
+        z-index: 2;
+        width: 100vw;
+        /*margin:  5vh*/
+
+        /*below is for scrolling wrapper*/
 
     }
 
@@ -119,16 +145,19 @@
 
     #weather {
         /*display: flex;*/
-        /*justify-content: space-evenly;*/
+        flex-direction: row;
+        justify-content: space-around;
         /*border: 3px solid silver;*/
-        flex-direction: column;
-        width: 70%;
-        margin-left: -59vw;
+        /*flex-direction: column;*/
+        /*width: 50%;*/
+        margin-top: -10vh;
+        margin-left: 0;
+        overflow-y:hidden
 
 
     }
 
-    #apiBaseCard {
+    .apiBaseCard {
         /*display: flex;*/
         /*flex-direction: column;*/
         /*align-items: center;*/
@@ -139,18 +168,32 @@
         /*font-size: 1rem;*/
         /*border-radius: 4px;*/
         /*margin: 1rem;*/
-        /*width: 15rem;*/
-        /*height: 15rem;*/
-        height: 30%;
+        height: 13rem;
+        width: 7rem;
+        /*transform: rotateY(50deg);*/
+        padding: 5px;
+
+    }
+    .apiBaseCardBorder {
+        margin: 2rem;
+        height: 28vh;
+        padding: 0;
+        /*transform: rotateY(35deg);*/
 
     }
 
-    /*.hr {*/
+
+
+        /*.hr {*/
     /*    width: 5rem*/
     /*}*/
 
 
 }
 
-
+@media only screen and (min-width:1700px) {
+    .apiBaseCardBorder  {
+        height: 26vh;
+    }
+}
 

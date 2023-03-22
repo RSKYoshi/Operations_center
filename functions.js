@@ -145,21 +145,66 @@ function currentLocation(position) {
 }
 currentLocation();
 
-// function clickNDrag(){
 
-    let  iframeDiv =  document.getElementById("iframeBorderDiv");
-    iframeDiv.style.top= '50%';
-    function onDrag(e){
-        iframeDiv.style.left = `${e.clientX}px`
-        iframeDiv.style.top = `${e.clientY}px`
-        console.log( e.clientX + "," + e.clientY );
-        // console.log('click');
+
+
+
+
+
+let  iframeDiv =  document.getElementById("iframeBorderDiv");
+iframeDiv.addEventListener("mousedown", mouseDown)
+
+function mouseDown(e) {
+    e.preventDefault();
+    // console.log('test');
+    window.addEventListener("mousemove", mouseMove);
+    window.addEventListener("mouseup", mouseUp);
+
+    let prevX = e.clientX;
+    let prevY  = e.clientY;
+    // console.log('test');
+
+    function mouseMove(e) {
+        let newX = prevX - e.clientX;
+        let newY = prevY -  e.clientY;
+        console.log(newX,newY);
+
+        const rect =  iframeDiv.getBoundingClientRect();
+
+        iframeDiv.style.left = rect.left - newX + "px"
+        iframeDiv.style.top = rect.top - newY + "px"
+
+        prevX = e.clientX;
+        prevY = e.clientY;
     }
-    iframeDiv.addEventListener("drag", onDrag);
+    function mouseUp(e) {
+        window.removeEventListener("mousemove", mouseMove);
+        window.removeEventListener("mousemove", mouseUp)
+
+    }
+
+}
+
+    // iframeDiv.style.top= '50%';
+    // function mouseMove(e){
+    //     e.preventDefault();
+//         iframeDiv.style.left = `${e.clientX}px`
+//         iframeDiv.style.top = `${e.clientY}px`
+//         console.log( e.clientX + "," + e.clientY );
+//         // console.log('click');
+//
+//     }
+//     iframeDiv.addEventListener("mousedown", mouseMove, false);
+//
+//
+//     function mouseUp(e) {
+//         // alert("drag has stopped")
+//         e.preventDefault();
+//         iframeDiv.style.left = `${e.clientX}px`
+//         iframeDiv.style.top = `${e.clientY}px`
+//     }
+//     iframeDiv.addEventListener("dragend", mouseUp, false);
 // }
-
-
-
 // clickNDrag();
 // window.onload = clickNDrag;
 

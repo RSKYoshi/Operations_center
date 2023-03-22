@@ -17,15 +17,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 101.1vh;
-    width: 101vw;
+    height: 100vh;
+    width: 100vw;
     /* background-image: url(./img/ocean-swirl-bg.jpeg); */
     /* background-image: url(https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif); */
     background-image: url(img/paid-istock-beach.jpg);
     background-size: 101vw 101vh;
     /*background-size: 100vw 100vh;*/
 
-    overflow: scroll;
+    /*overflow: scroll;*/
     /* z-index: 4; */
     padding: 0;
     /* margin: 15px; */
@@ -53,6 +53,7 @@ body {
     object-fit: fill;
     /*background-repeat: no-repeat;*/
     background-size: cover;
+    margin-top: 2vh;
 }
 
 #clock {
@@ -66,6 +67,7 @@ body {
 }
 
 #cityDiv {
+    display: flex;
     color: grey;
     /*border: 2px whitesmoke solid;*/
     box-shadow: 0px 0px 10px 2px darkslategrey;
@@ -76,23 +78,37 @@ body {
 
 }
 
+
+/*.scrolling-wrapper {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    overflow-x: scroll;*/
+/*    overflow-y: hidden;*/
+/*    white-space: normal;*/
+/*    width: 100vw;*/
+/*}*/
+
+
 #iframeBorderDiv {
     z-index: 3;
-    cursor: move;
-    /*position: absolute;*/
-    /*margin-top: 40vh;*/
-    /*top: 50%;*/
-    /*left:  50%*/
-    /*width: 20rem;*/
-    /*transform: translate(-50% ,-50%);*/
+    /*cursor: move;*/
+    position: absolute;
+    /*margin-top: 17vh;*/
+    top: 55%;
 }
-
+#dragTab {
+    background-image: url("img/koa-bg.webp");
+    width: 4rem;
+    height: 2rem;
+    border-radius: 8rem 4rem 1rem 0;
+    margin-left: 1px;
+}
 #video {
     /*width: 31.9vw;*/
     /*height: 37vh;*/
     color: grey;
     /*border: 2px whitesmoke solid;*/
-    box-shadow: 0px 0px 10px 2px darkslategrey;
+    box-shadow: 0px 0px 0px 2px darkslategrey;
     background-color: rgba(255, 255, 255, 80%);
     font-size: 2rem;
     border-radius: 7px;
@@ -128,11 +144,22 @@ div.clickEffect  {
     }
 }
 
+
+
 /*small screens, laptops*/
 /*the max width the screen cango before  applying below changes*/
 @media only screen and (min-width:500px) and  (max-width: 1000px) {
     #bossDiv {
         background-size: 100vw 100vh;
     }
-
+    #iframeBorderDiv {
+        /*z-index: 3;*/
+        /*cursor: move;*/
+        /*position: absolute;*/
+        /*margin-top: 40vh;*/
+        /*top: 50%;*/
+        /*left:  50%*/
+        /*width: 20rem;*/
+        /*transform: translate(-50% ,-50%);*/
+    }
 }

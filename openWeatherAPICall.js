@@ -53,8 +53,8 @@ const app = {
 
 
                             weatherDiv.innerHTML += `
-                            <div id="apiBaseCardBorder">
-                                 <div id="apiBaseCard">
+                            <div class="apiBaseCardBorder">
+                                 <div class="apiBaseCard">
                                     <img src="https://openweathermap.org/img/wn/${apiData.daily[i].weather[j].icon}@2x.png" 
                                     alt="img"/>
                                     <div>${replacementDay}</div>

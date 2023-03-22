@@ -37,7 +37,8 @@
             <!--    <div id="div1" >Hello</div>-->
             <br>
             <div id="iframeBorderDiv" draggable="true">
-                <div style="cursor: move;  user-select: none;">click here to drag</div>
+                <!--for some reason, when trying to move inline styling for #dragTab &  #video to external css, it messes up the drag positioning-->
+                <div id="dragTab" style="cursor: move;  user-select: none;"></div>
                 <iframe id="video" style="user-select: none;" src="https://www.youtube.com/embed/HdiKqg23D0o?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 <!--            <div id="testDragDiv" style="border: 7px solid  red; height: 7vh; width: 7vw;  position: absolute; margin-top: 40vh" draggable="true"></div>-->
