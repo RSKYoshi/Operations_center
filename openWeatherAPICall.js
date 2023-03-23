@@ -1,6 +1,7 @@
 
 import {browserCoords, browserlat, browserLong} from "./functions.js"
 let today = new Date();
+
 //objective: on page load, show a functioning weather forecast
 
 //this const app has several functions that may be activated via dot notation [ex: app.init()]
@@ -32,16 +33,30 @@ const app = {
                     app.showWeather(apiData);
                     console.log(apiData);
                     let weatherDiv = document.getElementById("weather");
+
                     //at index 0, I want the day to say "today" instead of the actual day name
                     for (let i = 0; i < 7; i++) {
                         for (let j = 0; j < 1; j++) {
+                            console.log([0]);
                             // console.log(today);
                             let currentDay = new Date(apiData.daily[i].dt * 1000).toDateString();
+                            console.log(currentDay);
                             // currentDay === today ? "today":currentDay
                             // console.log(currentDay.split(' '));
                             let dateArray = currentDay.split(' ');
                             console.log(dateArray);
                             let replacementDay = dateArray[0];
+                            console.log(replacementDay);
+                            console.log(today);
+                            console.log(currentDay);
+                            let onlyToday = new Date(apiData.daily[j].dt * 1000).toDateString();
+                            console.log(onlyToday);
+                            let firstDay = onlyToday.split(' ')[0];
+                            console.log(firstDay);
+
+                            if(replacementDay===firstDay){
+                               replacementDay="Today"
+                            }
                             // let weekArraySearch = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
                             // let todayString = "Today"
                             // for (let k = 0; k < replacementDay.length; k++) {

@@ -121,7 +121,9 @@ function getCityFromAPI(position){
             .then((apiData) => {
                     console.log(apiData)
                     let cityDiv = document.getElementById("cityDiv");
-                    return cityDiv.innerHTML += "Weather for " + apiData[0].name
+                    // return cityDiv.innerHTML += "Weather for " + apiData[0].name
+                    return cityDiv.innerHTML = apiData[0].name
+
                 }
                 // console.log(apiData)
             )

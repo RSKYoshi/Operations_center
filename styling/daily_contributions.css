@@ -43,7 +43,8 @@ body {
 #clockBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
     align-items: center;
     width: 25vw;
     height: 5vh;
@@ -67,14 +68,29 @@ body {
 }
 
 #cityDiv {
+    /*this one works with queries*/
+    /*display: flex;*/
+    /*color: grey;*/
+    /*!*border: 2px whitesmoke solid;*!*/
+    /*box-shadow: 0px 0px 10px 2px darkslategrey;*/
+    /*background-color: rgba(255, 255, 255, 80%);*/
+    /*font-size: 1.5rem;*/
+    /*border-radius: 4px;*/
+    /*z-index: 2*/
+
+/*    new*/
     display: flex;
     color: grey;
-    /*border: 2px whitesmoke solid;*/
+    /* border: 2px whitesmoke solid; */
     box-shadow: 0px 0px 10px 2px darkslategrey;
     background-color: rgba(255, 255, 255, 80%);
     font-size: 1.5rem;
     border-radius: 4px;
-    z-index: 2
+    z-index: 2;
+    /*width: 8rem;*/
+    height: 2.33593rem;
+    justify-content: center;
+    align-items: center;
 
 }
 
