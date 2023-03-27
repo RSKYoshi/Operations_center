@@ -43,7 +43,7 @@ body {
 #clockBox {
     display: flex;
     flex-direction: row;
-     justify-content: space-around;
+    justify-content: space-between;
     /*justify-content: center;*/
     align-items: center;
     /*width: 26vw;*/
@@ -131,6 +131,13 @@ body {
     border-radius: 8rem 4rem 1rem 0;
     margin-left: 1px;
 }
+.hide {
+    display: none;
+}
+/*#dragTab:hover + .hide {*/
+/*    display: block;*/
+/*}*/
+
 #video {
     /*width: 31.9vw;*/
     /*height: 37vh;*/
@@ -172,6 +179,9 @@ div.clickEffect  {
     }
 }
 
+#locationButton  {
+    /*margin-top: ;*/
+}
 
 
 /*small screens, laptops*/
