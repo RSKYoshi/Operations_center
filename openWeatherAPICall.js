@@ -12,6 +12,14 @@ const app = {
         //     .getElementById("weather")
         //     .innerHTML = app.fetchWeather
         app.fetchWeather();
+        function clearForecast(){
+            app.fetchWeather = ""
+            // console.log("test");
+        }
+        // function getForecast(){
+        //     app.fetchWeather();
+        // }
+        // setInterval( ()=>{clearForecast();  app.fetchWeather()},1000);
     },
     //this fetchWeather key will make the API call using the user's current location based off browser
     fetchWeather: (position) => {
