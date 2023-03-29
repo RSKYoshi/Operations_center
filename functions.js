@@ -1,4 +1,5 @@
-export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords, getCityFromAPI, clickEffect}
+
+export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords, getCityFromAPI, clickEffect};
 
 function showPosition(position){
     let lat = position.coords.latitude;

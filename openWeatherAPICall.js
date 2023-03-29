@@ -19,7 +19,7 @@ const app = {
         // function getForecast(){
         //     app.fetchWeather();
         // }
-        // setInterval( ()=>{clearForecast();  app.fetchWeather()},1000);
+        setInterval( ()=>{clearForecast();  app.fetchWeather()},15*60*1000);
     },
     //this fetchWeather key will make the API call using the user's current location based off browser
     fetchWeather: (position) => {
