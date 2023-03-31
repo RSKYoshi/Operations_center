@@ -47,8 +47,8 @@ body {
     /*justify-content: center;*/
     align-items: center;
     /*width: 26vw;*/
-    width: 50vw;
-    height: 8vh;
+    /*width: 50vw;*/
+    /*height: 8vh;*/
     /* border: 3px silver solid; */
     /* border-radius: 2rem; */
     /* background-image: url(https://thumbs.gfycat.com/AncientGreenColt-size_restricted.gif); */
@@ -66,7 +66,8 @@ body {
     /*border: 2px whitesmoke solid;*/
     /*box-shadow: 0px 0px 10px 2px darkslategrey;*/
     /*background-color: rgba(255, 255, 255, 80%);*/
-    font-size: 2rem;
+    /*font-size: 2rem;*/
+    font-size: 5rem;
     /*border-radius: 4px;*/
     z-index: 2
 }
@@ -89,7 +90,8 @@ body {
     /* border: 2px whitesmoke solid; */
     /*box-shadow: 0px 0px 10px 2px darkslategrey;*/
     /*background-color: rgba(255, 255, 255, 80%);*/
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
+    font-size: 2.5rem;
     border-radius: 4px;
     z-index: 2;
     /*width: 8rem;*/
@@ -203,4 +205,37 @@ div.clickEffect  {
         /*width: 20rem;*/
         /*transform: translate(-50% ,-50%);*/
     }
+}
+
+@media only screen and (min-width:1500px) {
+
+    #clock {
+        font-size: 4rem;
+    }
+    #cityDiv {
+        font-size: 2rem;
+    }
+
+}
+
+@media only screen and (min-width:1600px) {
+
+    #clock {
+        font-size: 4rem;
+    }
+    #cityDiv {
+        font-size: 2rem;
+    }
+
+}
+
+@media only screen and (min-width:1700px) {
+
+    #clock {
+        font-size: 3rem;
+    }
+    #cityDiv {
+        font-size: 1.5rem;
+    }
+
 }
