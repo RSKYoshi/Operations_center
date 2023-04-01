@@ -39,28 +39,28 @@ const app = {
                 })
                 .then(apiData => {
                     app.showWeather(apiData);
-                    console.log(apiData);
+                    // console.log(apiData);
                     let weatherDiv = document.getElementById("weather");
 
                     //at index 0, I want the day to say "today" instead of the actual day name
                     for (let i = 0; i < 7; i++) {
                         for (let j = 0; j < 1; j++) {
-                            console.log([0]);
+                            // console.log([0]);
                             // console.log(today);
                             let currentDay = new Date(apiData.daily[i].dt * 1000).toDateString();
-                            console.log(currentDay);
+                            // console.log(currentDay);
                             // currentDay === today ? "today":currentDay
                             // console.log(currentDay.split(' '));
                             let dateArray = currentDay.split(' ');
-                            console.log(dateArray);
+                            // console.log(dateArray);
                             let replacementDay = dateArray[0];
-                            console.log(replacementDay);
-                            console.log(today);
-                            console.log(currentDay);
+                            // console.log(replacementDay);
+                            // console.log(today);
+                            // console.log(currentDay);
                             let onlyToday = new Date(apiData.daily[j].dt * 1000).toDateString();
-                            console.log(onlyToday);
+                            // console.log(onlyToday);
                             let firstDay = onlyToday.split(' ')[0];
-                            console.log(firstDay);
+                            // console.log(firstDay);
 
                             if(replacementDay===firstDay){
                                replacementDay="Today"
@@ -143,7 +143,7 @@ const app = {
     //     let long = position.coords.longitude.toFixed(2);
     // },
     showWeather: (resp) => {
-        console.log(resp);
+        // console.log(resp);
     //    starbucks lat: 29.4416905 long: -98.6661463
     }
 

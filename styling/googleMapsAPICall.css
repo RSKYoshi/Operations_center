@@ -1,5 +1,8 @@
 #map {
-    height: 100%;
+    width: 25vw;
+    height: 25vh;
+    margin-top: -115vh;
+    z-index: 2;
 }
 html, body {
     height: 100%;
