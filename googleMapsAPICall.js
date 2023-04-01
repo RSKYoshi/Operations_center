@@ -32,4 +32,5 @@ async function initMap() {
     });
 }
 
-window.onload = initMap();
+//for some reason, when I do window.onload for initMap(), the city div just vanishes
+initMap();

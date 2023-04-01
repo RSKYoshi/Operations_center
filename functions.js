@@ -137,16 +137,16 @@ window.onload=getCityFromAPI;
 
 
 
-function currentLocation(position) {
-    navigator.geolocation.getCurrentPosition(position => {
-        let lat = position.coords.latitude;
-        let long = position.coords.longitude;
-        let showCoords = document.getElementById("location");
-        showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
-        console.log("lat: " + lat + "\n" + "long: " + long);
-    })
-}
-currentLocation();
+// function currentLocation(position) {
+//     navigator.geolocation.getCurrentPosition(position => {
+//         let lat = position.coords.latitude;
+//         let long = position.coords.longitude;
+//         let showCoords = document.getElementById("location");
+//         showCoords.innerHTML = `<div>lat: ${lat} <br> long: ${long} </div>`
+//         console.log("lat: " + lat + "\n" + "long: " + long);
+//     })
+// }
+// currentLocation();
 
 
 
