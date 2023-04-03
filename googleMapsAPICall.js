@@ -3,14 +3,15 @@ let map;
 let lat;
 let long;
 
+
+//pulls user's location based on browser api call into Google Maps api call to set center point on user's location
+//to do this, developer must set the fetch and any waterfall code inside the navigator call. Does not work outside this method
 async function initMap() {
-
-
 
     navigator.geolocation.getCurrentPosition(async position => {
 
-        lat = parseFloat(position.coords.latitude.toFixed(2));
-        long = parseFloat(position.coords.longitude.toFixed(2));
+        lat = position.coords.latitude;
+        long = position.coords.longitude;
 
         (g=>{
             let h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document,
@@ -30,13 +31,39 @@ async function initMap() {
             d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f, ...n)=>r.add(f)&&u().then(()=>d[l](f,...n))
         })
         ({key: GOOGLEMAPS_API_KEY, v: "weekly"});
+
+
+
+
+
+
         const {Map} = await google.maps.importLibrary("maps");
 
-        map = new Map(document.getElementById("map"), {
+
+        let mapOptions = {
             center: {lat: lat, lng: long},
-            // center: { lat: -34.397, lng: 150.644 },
-            zoom: 8,
-        });
+            zoom: 8
+        }
+
+        let markerOptions = {
+            position: new google.maps.LatLng(lat,long)
+        }
+        let marker = new google.maps.Marker(markerOptions)
+
+        map = new Map(document.getElementById("map"), mapOptions)
+
+        marker.setMap(map);
+
+
+
+
+
+
+
+
+
+
+
     })
 }
 
