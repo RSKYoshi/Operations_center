@@ -155,6 +155,7 @@ body {
     z-index: 2;
     cursor: move;
     /*position: absolute;*/
+    justify-content: center;
 }
 
 div.clickEffect  {
