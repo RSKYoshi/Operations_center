@@ -155,9 +155,9 @@ window.onload=getCityFromAPI;
 
 
 let  iframeDiv =  document.getElementById("iframeBorderDiv");
-iframeDiv.addEventListener("mousedown", mouseDown)
+iframeDiv.addEventListener("mousedown", activateDragYoutube)
 
-function mouseDown(e) {
+function activateDragYoutube(e) {
     e.preventDefault();
     // console.log('test');
     window.addEventListener("mousemove", mouseMove);
@@ -176,6 +176,42 @@ function mouseDown(e) {
 
         iframeDiv.style.left = rect.left - newX + "px"
         iframeDiv.style.top = rect.top - newY + "px"
+
+        prevX = e.clientX;
+        prevY = e.clientY;
+    }
+    function mouseUp(e) {
+        window.removeEventListener("mousemove", mouseMove);
+        window.removeEventListener("mousemove", mouseUp)
+
+    }
+
+}
+
+let googleMapsDiv = document.getElementById("googleMapsDiv");
+googleMapsDiv.addEventListener("mousedown", activateDragGoogle);
+
+function activateDragGoogle(e) {
+    e.preventDefault();
+    // console.log('test');
+
+    // let googleTab = document.getElementById("dragTabGoogleMaps");
+    window.addEventListener("mousemove", mouseMove);
+    window.addEventListener("mouseup", mouseUp);
+
+    let prevX = e.clientX;
+    let prevY  = e.clientY;
+    // console.log('test');
+
+    function mouseMove(e) {
+        let newX = prevX - e.clientX;
+        let newY = prevY -  e.clientY;
+        console.log(newX,newY);
+
+        const rect =  googleMapsDiv.getBoundingClientRect();
+
+        googleMapsDiv.style.left = rect.left - newX + "px"
+        googleMapsDiv.style.top = rect.top - newY + "px"
 
         prevX = e.clientX;
         prevY = e.clientY;

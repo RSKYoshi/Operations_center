@@ -129,7 +129,7 @@ body {
     top: 60%;
     /*left: 40.9%;*/
 }
-#dragTab {
+#dragTabYoutube {
     background-image: url("img/koa-bg.webp");
     width: 4rem;
     height: 2rem;
@@ -157,6 +157,10 @@ body {
     /*position: absolute;*/
     justify-content: center;
 }
+
+
+
+
 
 div.clickEffect  {
     position:fixed;

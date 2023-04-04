@@ -50,7 +50,7 @@ async function initMap() {
         }
         let marker = new google.maps.Marker(markerOptions)
 
-        map = new Map(document.getElementById("map"), mapOptions)
+        map = new Map(document.getElementById("googleMap"), mapOptions)
 
         marker.setMap(map);
 

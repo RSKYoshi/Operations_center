@@ -1,11 +1,31 @@
-#map {
+
+
+#googleMapsDiv {
+    z-index: 3;
+    /* cursor: move; */
+    position: absolute;
+    /*margin-top: 55vh;*/
+    /* top: 20%; */
+    /* left: 40.9%; */
+    /*margin-left: -95vw;*/
+}
+
+#dragTabGoogleMaps{
+    background-image: url("img/koa-bg.webp");
+    width: 4rem;
+    height: 2rem;
+    border-radius: 8rem 4rem 1rem 0;
+    margin-left: 1px;
+    /*cursor: move;*/
+
+}
+#googleMap {
     width: 35vw;
     height: 41vh;
-    margin-top: -106vh;
-    z-index: 2;
-}
-html, body {
-    /*height: 100%;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
+    /*margin-top: -106vh;*/
+    /*cursor: move;*/
+    background-color: rgba(255, 255, 255, 80%);
+    border-radius: 7px;
+    z-index: 3;
+    cursor: move;
 }
