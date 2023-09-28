@@ -27,7 +27,7 @@ const app = {
 
             let lat = position.coords.latitude.toFixed(2);
             let long = position.coords.longitude.toFixed(2);
-            let key = OPENWEATHER_API_KEY
+            let key = OPENWEATHER_API_KEY;
             let units = "imperial"
             let lang = "en"
 
