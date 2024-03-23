@@ -1,6 +1,8 @@
 
 export {sayHello, currentDate, clock, browserlat, browserLong, browserCoords, getCityFromAPI, clickEffect};
 
+const OPENWEATHER_API_KEY = "bc7136325ecf5f4335fad63269e47bfc";
+
 function showPosition(position){
     let lat = position.coords.latitude;
     let long = position.coords.longitude;

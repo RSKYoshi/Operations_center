@@ -1,6 +1,7 @@
 
 import {browserCoords, browserlat, browserLong} from "./functions.js"
 let today = new Date();
+const OPENWEATHER_API_KEY = "bc7136325ecf5f4335fad63269e47bfc";
 
 //objective: on page load, show a functioning weather forecast
 
@@ -12,14 +13,10 @@ const app = {
         //     .getElementById("weather")
         //     .innerHTML = app.fetchWeather
         app.fetchWeather();
-        function clearForecast(){
-            app.fetchWeather = ""
-            // console.log("test");
-        }
+
         // function getForecast(){
         //     app.fetchWeather();
         // }
-        setInterval( ()=>{clearForecast();  app.fetchWeather()},15*60*1000);
     },
     //this fetchWeather key will make the API call using the user's current location based off browser
     fetchWeather: (position) => {
@@ -41,7 +38,12 @@ const app = {
                     app.showWeather(apiData);
                     // console.log(apiData);
                     let weatherDiv = document.getElementById("weather");
-
+                    function clearForecast(){
+                        app.fetchWeather = ""
+                        // console.log("test");
+                        alert("weather has been cleared")
+                    }
+                    setTimeout( ()=>{clearForecast();  },1000);
                     //at index 0, I want the day to say "today" instead of the actual day name
                     for (let i = 0; i < 7; i++) {
                         for (let j = 0; j < 1; j++) {
@@ -74,7 +76,6 @@ const app = {
                             //     replacementDay = dateArray[i].replace("", "Today")
                             // }
 
-
                             weatherDiv.innerHTML += `
                             <div class="apiBaseCardBorder">
                                  <div class="apiBaseCard">
@@ -88,8 +89,6 @@ const app = {
                                     <div>Low: ${apiData.daily[i].temp.min}°F</div>
                                 </div>
                             </div>
-                           
-                        
                         `
                         }
                     }
