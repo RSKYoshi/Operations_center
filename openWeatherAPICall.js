@@ -38,11 +38,11 @@ const app = {
                     app.showWeather(apiData);
                     // console.log(apiData);
                     let weatherDiv = document.getElementById("weather");
-                    function clearForecast(){
-                        app.fetchWeather = ""
+                    // function clearForecast(){
+                    //     app.fetchWeather = ""
                         // console.log("test");
-                        alert("weather has been cleared")
-                    }
+                        // alert("weather has been cleared")
+                    // }
                     setTimeout( ()=>{clearForecast();  },1000);
                     //at index 0, I want the day to say "today" instead of the actual day name
                     for (let i = 0; i < 7; i++) {
