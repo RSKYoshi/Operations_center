@@ -36,11 +36,11 @@ const app = {
                 })
                 .then(apiData => {
                     app.showWeather(apiData);
-                    // console.log(apiData);
+                    console.log(apiData);
                     let weatherDiv = document.getElementById("weather");
                     // function clearForecast(){
                     //     app.fetchWeather = ""
-                        // console.log("test");
+                    //     console.log("test");
                         // alert("weather has been cleared")
                     // }
                     setTimeout( ()=>{clearForecast();  },1000);
