@@ -63,8 +63,8 @@
     white-space: normal;
     /*overflow-y: scroll;*/
     height: 100vh;
-    margin-bottom: 1vw;
-
+    /*margin-bottom: 1vw;*/
+    margin-top: -32vw;
 }
 
 .apiBaseCardBorder {
